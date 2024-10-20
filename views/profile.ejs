@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-Page</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <a href="/" class="aBtn">Home</a>
+            <a href="/profile/upload" class="aBtn">Upload Profile</a>
+            <a href="/help" class="aBtn">Workout</a>
+            <a href="/logout" class="aBtn">Logout</a>
+        </div>
+
+        <div class="profile">
+            <div class="pic">
+                <img src="/images/uploads/<%= user.profilepic %>" alt="">
+            </div>
+            <h1>Hello' <%= user.name %></h1>
+        </div>
+        <div class="forms">
+            <form action="/post" method="post">
+                <textarea name="content" id="f1" placeholder="What's on your mind"></textarea><br>
+                <input type="submit" value="create post" class="btn">
+            </form>
+        </div>
+        <h2>All Posts</h2>
+        <div class="posts">
+            <% user.posts.reverse().forEach((post) => { %>
+                <div class="post">
+                    <h3><%= user.username %></h3>
+                    <p><%= post.content %></p>
+                    <div class="links">
+                        <a href="/like/<%= post._id %>">
+                            <%= post.likes.indexOf(user._id) === -1 ? "Like" : "Unlike" %>
+                        </a>
+                        <a href="/edit/<%= post._id %>">Edit</a>
+                        <a href="/delete/<%= post._id %>">Delete</a>
+                    </div>
+                </div>
+           <% }) %>
+        </div>
+    </div>
+</body>
+</html>

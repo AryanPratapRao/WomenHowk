@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-Page</title>
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <style>
+        .main h1{
+            color: #f13a11;
+            margin-bottom: 40px;
+            font-size: 43px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Edit Content</h1>
+        <div class="forms">
+            <form action="/Update/<%= post._id %>" method="post">
+                <textarea name="content" id="f1" placeholder="<%= post.content %>"></textarea><br>
+                <input type="submit" value="Update" class="btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

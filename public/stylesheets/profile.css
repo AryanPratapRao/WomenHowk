@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-bottom: 40px;
+}
+
+.pic{
+    height: 130px;
+    width: 130px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.pic img{
+    height: 130px;
+    width: 130px;
+}
+
+.profile h1{
+    font-size: 43px;
+    font-weight: 600;
+    color: #f13a11;
+}
+
+#f1{
+    height: 100px;
+    width: 400px;
+    background-color: #171819;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 40px;
+    color: #fff;
+    outline: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: #f13a11;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.forms{
+    margin-bottom: 20px;
+}
+
+.main h2{
+    color: #fff;
+    opacity: .7;
+    margin-bottom: 20px;
+}
+
+.posts{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.post{
+    width: 400px;
+    height: 150px;
+    background-color: #171819;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post h3{
+    color: #f13a11;
+    margin-bottom: 10px;
+}
+
+.post p{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.links{
+    display: flex;
+    gap: 30px;
+}
+
+.links a{
+    text-decoration: none;
+    font-weight: 800;
+    color: #f13a11;
+}
+
+
+.aBtn{
+    padding: 10px 20px;
+    background-color: #f13a11;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.nav{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+
+@media(max-width: 500px){
+    .main{
+        padding: 5px;
+    }
+    .nav{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 50px;
+
+    }
+
+    .nav .aBtn{
+        height: 40px;
+    }
+
+    .pic{
+        width: 50%;
+    }
+
+    .pic img{
+        width: 100%;
+    }
+
+    
+}
